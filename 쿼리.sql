@@ -106,6 +106,44 @@ WHERE
 	/* `name` IS NULL; */
 	`name` IS not NULL; /* 다음 쿼리가 없는 경우 세미클론 생략 가능 (쿼리 구분용) */
 
+/*-------------------------------------------------*/
+UPDATE student_mst SET score = 80 WHERE `name` = '박준현';
+	
+	
+/* 2학년 중에 성적이 80에서 90사이인 학생들의 점수를 100으로 바꿔라 */
+UPDATE 
+	student_mst 
+SET 
+	score = 100 
+WHERE 
+	student_year = 2 
+	AND score BETWEEN 80 AND 90; /* 쿼리는 대소문자 구분을 하지 않는다.  */
+
+/*-------------------------------------------------*/
+
+DELETE
+FROM 
+	student_mst
+WHERE 
+	score < 80;
+
+/* select의 ?? */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
