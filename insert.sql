@@ -82,7 +82,7 @@ FROM
 WHERE
 	/* student_year IN(1, 2); OR을 대신해서IN으로 값을 묶을 수 있다. */
 	student_year NOT IN(2, 3); 
-	/* 연산자 기호를 쓸 때에는 not이 앞으로, IN, LIKE, BETWEEN과 같은 키워드를 쓸 땐 not을 키워드 바로 앞에쓴다. */
+	/* 연산자 기호를 쓸 때에는 not이 맨 앞으로, IN, LIKE, BETWEEN과 같은 키워드를 쓸 땐 not을 키워드 바로 앞에쓴다. */
 
 SELECT
 	id,
@@ -125,9 +125,7 @@ DELETE
 FROM 
 	student_mst
 WHERE 
-	score < 80;
-
-/* select의 ?? */
+	score < 80; /* select의 ?? */
 
 
 
