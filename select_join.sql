@@ -60,7 +60,8 @@ FROM
 	user_mst um
 	LEFT OUTER JOIN order_mst om ON(om.user_id = um.id)
 	LEFT OUTER JOIN order_dtl od ON(od.order_id = om.id);
-
+	
+/*----------------------------*/
 SELECT
 	cm.id AS '순번',
 	subm.course_name AS '과목명',
@@ -76,6 +77,12 @@ FROM
 	LEFT OUTER JOIN status_mst stam ON(stam.id = cm.status_id);
 	
 SELECT
+	*
+FROM
+	student_mst sm
+	LEFT OUTER JOIN course_mst cm ON (cm.student_id = sm.id);	
+	
+SELECT
 	sm.id AS '순번',
 	sbm.course_name AS '과목명',
 	sm.student_name AS '수강생명',
@@ -88,30 +95,7 @@ FROM
 	LEFT OUTER JOIN course_mst cm ON(cm.student_id = sm.id)
 	LEFT OUTER JOIN subject_mst sbm ON(sbm.id = cm.subject_id)
 	LEFT OUTER JOIN status_mst stm ON(stm.id = cm.status_id)
-ORDER BY /* select의 정렬을 해주는 기능 */
+ORDER BY
 	sm.id,
 	sbm.id;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
