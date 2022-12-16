@@ -38,7 +38,7 @@ SELECT
 	price * stock AS total_price
 FROM
 	order_mst;
-
+	
 /*--------------------------*/
 # max가 100이상인 것을 구하고 싶을 때 (쿼리문의 순서)
 
