@@ -8,7 +8,7 @@ SELECT
 	um.name
 FROM
 	order_mst AS om
-	LEFT OUTER JOIN order_dt1 AS od ON(od.order_id = om.id)
+	LEFT OUTER JOIN order_dtl AS od ON(od.order_id = om.id)
 	LEFT OUTER JOIN product_mst AS pm ON(pm.id = od.product_id)
 	LEFT OUTER JOIN user_mst AS um ON(om.user_id = um.id)
 ORDER BY
@@ -17,7 +17,7 @@ ORDER BY
 SELECT
 	nm.title,
 	nm.content,
-	wm.name,
+	wm.`name`,
 	ni.img_name
 FROM
 	study_notice_mst nm
