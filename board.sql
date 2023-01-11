@@ -20,3 +20,5 @@ create table MEMBER (
     tel_number VARCHAR(20) NOT NULL,
     address TEXT NOT NULL
 );
+
+select * from Member;
